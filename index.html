@@ -1,12 +1,153 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi página web</title>
+    <title>Galería de Motos</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #111;
+            color: white;
+        }
+
+        header {
+            background: #000;
+            text-align: center;
+            padding: 45px 20px;
+        }
+
+        header h1 {
+            font-size: 45px;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            color: #aaa;
+            font-size: 18px;
+        }
+
+        .galeria {
+            width: 90%;
+            max-width: 1000px;
+            margin: 50px auto;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+
+        .moto {
+            background: #222;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.6);
+            transition: 0.3s;
+        }
+
+        .moto:hover {
+            transform: translateY(-8px);
+        }
+
+        .moto img {
+            width: 100%;
+            height: 320px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .informacion {
+            padding: 25px;
+            text-align: center;
+        }
+
+        .informacion h2 {
+            font-size: 28px;
+            margin-bottom: 12px;
+        }
+
+        .informacion p {
+            color: #bbb;
+            line-height: 1.5;
+        }
+
+        footer {
+            background: #000;
+            text-align: center;
+            padding: 25px;
+            color: #888;
+            margin-top: 50px;
+        }
+
+        @media (max-width: 700px) {
+            .galeria {
+                grid-template-columns: 1fr;
+            }
+
+            header h1 {
+                font-size: 32px;
+            }
+        }
+    </style>
 </head>
+
 <body>
-    <h1>¡Hola mundo!</h1>
-    <p>Mi primera página publicada en GitHub.</p>
+
+    <header>
+        <h1>🏍️ Galería de Motos</h1>
+        <p>Conoce algunas de las mejores motocicletas</p>
+    </header>
+
+    <section class="galeria">
+
+        <!-- MOTO 1 -->
+        <div class="moto">
+
+            <img src="imagenes/moto1.jpg" alt="Yamaha MT-07">
+
+            <div class="informacion">
+                <h2>Yamaha MT-07</h2>
+
+                <p>
+                    Una motocicleta deportiva, moderna y potente,
+                    ideal para disfrutar de la carretera.
+                </p>
+            </div>
+
+        </div>
+
+
+        <!-- MOTO 2 -->
+        <div class="moto">
+
+            <img src="imagenes/moto2.jpg" alt="Kawasaki Ninja">
+
+            <div class="informacion">
+                <h2>Kawasaki Ninja</h2>
+
+                <p>
+                    Una moto deportiva con un diseño agresivo,
+                    excelente rendimiento y gran velocidad.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <footer>
+        <p>© 2026 Galería de Motos</p>
+        <p>Creado por Francisco Cabrera</p>
+    </footer>
+
 </body>
+
 </html>
